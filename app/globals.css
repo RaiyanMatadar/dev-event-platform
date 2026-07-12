@@ -214,8 +214,10 @@
           @apply flex flex-col gap-2;
 
           ul {
+            
             li {
               @apply text-light-100 text-lg max-sm:text-sm;
+              
             }
           }
         }

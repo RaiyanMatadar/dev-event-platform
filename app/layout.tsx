@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono, Geist } from "next/font/google";
 import "./globals.css";
 import LightRays from "../components/LightRays";
+import Navbar from "@/components/Navbar";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -34,10 +35,13 @@ export default function RootLayout({
       className={`${geist.variable} ${schibstedGrotesk.variable} ${martianMono.variable} font-sans`}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
+
+        {/* LightRays component */}
         <div style={{ position: "absolute", width: "100%", zIndex: -1 }}>
           <LightRays
-            raysOrigin="top-center"
-            raysColor="#ffffff"
+            raysOrigin="top-center-offset"
+            raysColor="#10B981"
             raysSpeed={1}
             lightSpread={0.5}
             rayLength={3}
@@ -51,6 +55,7 @@ export default function RootLayout({
             saturation={1}
           />
         </div>
+        
         <main>
           {children}
         </main>
