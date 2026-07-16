@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import posthog from "posthog-js";
 
-interface Proprs {
+interface Props {
   image: string;
   title: string;
   slug: string;
@@ -12,7 +12,8 @@ interface Proprs {
   time: string;
 }
 
-function EventCard({ image, title, slug, location, date, time }: Proprs) {
+function EventCard({ image, title, slug, location, date, time }: Props) {
+  
   const handleClick = () => {
     posthog.capture("event_card_clicked", {
       event_title: title,

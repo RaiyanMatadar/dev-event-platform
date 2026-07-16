@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono, Geist } from "next/font/google";
 import "./globals.css";
-import LightRays from "../components/LightRays";
+import LightRays from "../components/LightRays/LightRays";
 import Navbar from "@/components/Navbar";
 
 const geist = Geist({
